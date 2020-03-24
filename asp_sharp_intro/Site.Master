@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="asp_sharp_intro.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" type="text/css" href="Styles.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+            <table class="auto-style1">
+                <tr>
+                    <td colspan="2" style="height: 50px">&nbsp; RSVP
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2">&nbsp;
+                            <div class="menu">
+                                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu"
+                                    EnableViewState="false" Orientation="Vertical" ForeColor="Red">
+                                    <Items>
+                                        <asp:MenuItem NavigateUrl="~/Start.aspx"
+                                            Text="Главная" />
+                                        <asp:MenuItem NavigateUrl="~/Reg.aspx"
+                                            Text="Регистрация" />
+                                        <asp:MenuItem NavigateUrl="~/Summary.aspx"
+                                            Text="Отчет о регистрации" />
+                                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Подробности" />
+                                        <asp:MenuItem NavigateUrl="~/SummaryBD.aspx" Text="Список участников"/>
+                                    </Items>
+                                </asp:Menu>
+                    </td>
+                    <td class="auto-style3">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                        <div class="footer">
+                        <asp:Literal ID="VisitorLiteral" runat="server" />
+                    </div>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td colspan="3" class="auto-style4">&nbsp;
+                        <div id="temo_footer">
+                            <ul class="footer_menu">
+                                <li><a href="Start.aspx">Главная</a></li>
+                                <li><a href="Reg.aspx">Регистрация</a></li>
+                                <li><a href="SummaryBD.aspx">Список участников</a></li>
+                                <li><a href="Summary.aspx">Отчет о регистрации</a></li>
+                                <li><a href="About.aspx">Подробности</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </form>
+</body>
+</html>
